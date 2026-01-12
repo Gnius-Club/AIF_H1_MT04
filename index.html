@@ -1,282 +1,444 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Playbook — 1º Preparatoria — Misión M04 - Introducción a la Ingeniería de Prompts</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook-P1-TM04</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-<h1><span class="book-icon">📋</span> <strong>Playbook Misión M04: Introducción a la Ingeniería de Prompts</strong></h1>
-<div class="header-widgets">
-<div class="timer-container">
-<span id="timer">⏱️ 00:00</span>
-<button id="startStop">Start</button>
-<button id="reset">Reset</button>
-</div>
-<div class="theme-toggle">
-<i class="fas fa-sun"></i>
-<label class="switch">
-<input type="checkbox" id="theme-toggle-input">
-<span class="slider round"></span>
-</label>
-<i class="fas fa-moon"></i>
-</div>
-</div>
-</header>
-<div class="main-container">
-<aside class="activity-list">
-<h2>Actividades</h2>
-<ul>
-<li><a href="#activity-0">📝</a></li>
-<li><a href="#activity-1">1</a></li>
-<li><a href="#activity-2">2</a></li>
-<li><a href="#activity-3">3</a></li>
-<li><a href="#activity-4">4</a></li>
-<li><a href="#activity-5">5</a></li>
-</ul>
-<div class="sidebar-info">
-<p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
-<p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
-</div>
-</aside>
-<main class="content">
-<div class="progress-bar">
-<div class="progress"></div>
-</div>
-<button id="toggle-dialogues">Mostrar todos los diálogos</button>
-<!-- 0) De un Vistazo -->
-<section class="activity-card" id="activity-0">
-<h2 class="activity-title">📝 De un Vistazo: Misión M04 - Introducción a la Ingeniería de Prompts</h2>
-<p class="activity-purpose">Resumen de objetivos, secuencia y entregables de la sesión.</p>
-<div class="overview">
-<section class="overview-block">
-<h3>Objetivos e “I Can”</h3>
-<ul>
-<li>Puedo diseñar prompts efectivos usando la estructura R.C.T.F.A.</li>
-<li>Puedo usar prompts para generar resultados útiles y adaptados a una tarea específica.</li>
-</ul>
-</section>
-<section class="overview-block">
-<h3>Secuencia y tiempos</h3>
-<ol>
-<li>Saludo Interactivo con IA — 3 min</li>
-<li>“I Can” + Desafío — 5–7 min</li>
-<li>AI GYM — 10–12 min</li>
-<li>Brain Spark — 17–20 min</li>
-<li>GNIUS STORM — 5 min</li>
-</ol>
-</section>
-<section class="overview-block">
-<h3>Entregable del Micro-Proyecto</h3>
-<ul>
-<li>Un prompt completo y detallado usando la estructura R.C.T.F.A. para una tarea elegida, y el resultado generado por una IA a partir de ese prompt.</li>
-</ul>
-</section>
-<section class="overview-block">
-<h3>Criterios de calidad</h3>
-<ul>
-<li>El prompt incluye claramente Rol, Contexto, Tarea, Formato y Audiencia (R.C.T.F.A.).</li>
-<li>El resultado generado por la IA es útil y coherente con la tarea definida.</li>
-<li>El prompt demuestra precisión y claridad en la instrucción.</li>
-<li>La adaptación del prompt a una audiencia específica es evidente en el resultado.</li>
-</ul>
-</section>
-<section class="overview-block">
-<h3>Materiales y preparación</h3>
-<ul>
-<li>Proyector e internet</li>
-<li>Acceso a LLM (ej. ChatGPT, Gemini, Copilot)</li>
-<li>Editor de texto</li>
-<li>Plantilla de ejemplo de prompt R.C.T.F.A. lista</li>
-</ul>
-</section>
-</div>
-</section>
-<!-- 1) Saludo Interactivo con IA -->
-<section class="activity-card" id="activity-1">
-<h2 class="activity-title">Saludo Interactivo con IA</h2>
-<p class="activity-purpose">Establecer tono profesional, conectar con el tema y activar a Xolo con perfil+intereses.</p>
-<div class="steps">
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 1 — Bienvenida y foco</h3>
-<p class="step-instructions">Proyectar Diapositiva 2. Enuncia el foco conceptual de la Ingeniería de Prompts y su relevancia profesional.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Equipo: hoy nos enfocaremos en la Ingeniería de Prompts, una habilidad fundamental para interactuar eficazmente con la Inteligencia Artificial. Aprenderemos a estructurar nuestras instrucciones para obtener resultados precisos y útiles, una capacidad clave en cualquier campo profesional que utilice herramientas de IA.</p>
-</div>
-</div>
-</article>
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 2 — Activación con Xolo</h3>
-<p class="step-instructions">Cada estudiante abre su chat con Xolo y envía un saludo con su perfil de aprendizaje e intereses, haciendo referencia a la misión actual.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Activen a Xolo con su perfil e intereses. Pueden usar un mensaje como: "Hola Xolo, soy [Nombre], perfil [X]; me interesa [Y]. Estoy listo para la Misión M04 de Ingeniería de Prompts." Confirmen que comprendieron los criterios de la sesión y sigan sus indicaciones personalizadas.</p>
-</div>
-</div>
-</article>
-</div>
-</section>
-<!-- 2) “I Can” + Desafío -->
-<section class="activity-card" id="activity-2">
-<h2 class="activity-title">“I Can Statement” + Desafío</h2>
-<p class="activity-purpose">Explicitar metas y presentar el reto que guiará la producción.</p>
-<div class="steps">
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 1 — Presentación del reto</h3>
-<p class="step-instructions">Proyectar Diapositiva 3. Define el reto: dominar la comunicación precisa con IA mediante prompts estructurados.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">El reto de hoy es transformar una idea o necesidad en una instrucción clara y efectiva para una IA. La precisión en la comunicación es tan importante como la capacidad de la IA. Evaluaremos su habilidad para estructurar prompts que generen resultados útiles y específicos.</p>
-</div>
-</div>
-</article>
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 2 — Afirmación “I Can”</h3>
-<p class="step-instructions">Proyectar Diapositiva 4. Cada estudiante redacta su “I Can” concreto alineado al entregable.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Ahora, formulen su propia afirmación "I Can". ¿Qué serán capaces de hacer al finalizar esta misión? Un ejemplo podría ser: "Puedo diseñar prompts efectivos usando la estructura R.C.T.F.A. para generar resultados útiles y adaptados." Tómense un minuto para redactar el suyo.</p>
-</div>
-</div>
-</article>
-</div>
-</section>
-<!-- 3) AI GYM -->
-<section class="activity-card" id="activity-3">
-<h2 class="activity-title">AI GYM</h2>
-<p class="activity-purpose">Formalizar criterios y/o framework antes de producir.</p>
-<div class="steps">
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 1 — Marco del día: R.C.T.F.A.</h3>
-<p class="step-instructions">Proyectar Diapositiva 5. Introduce la estructura R.C.T.F.A. (Rol, Contexto, Tarea, Formato, Audiencia) como el ADN de una instrucción profesional.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Hoy adoptaremos R.C.T.F.A., un marco para construir prompts robustos. Este marco agrega valor porque asegura que su instrucción sea completa y no deje espacio para ambigüedades. Eviten errores comunes como prompts vagos o sin contexto. Usen cada componente (Rol, Contexto, Tarea, Formato, Audiencia) para validar la calidad de su comunicación con la IA.</p>
-</div>
-</div>
-</article>
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 2 — Mini-demostración R.C.T.F.A.</h3>
-<p class="step-instructions">Proyectar Diapositiva 6. Construye en vivo un ejemplo mínimo de prompt usando R.C.T.F.A. para una tarea sencilla, como "resumir un artículo para un público específico".</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Observen cómo cada elemento de R.C.T.F.A. impacta el resultado. Por ejemplo, si el Rol es "experto en marketing", el Contexto es "tendencias de consumo", la Tarea es "analizar un informe", el Formato es "puntos clave" y la Audiencia es "ejecutivos", la IA generará una respuesta muy diferente a un prompt genérico. Verifiquen: ¿El Rol es claro? ¿El Contexto es suficiente?</p>
-</div>
-</div>
-</article>
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 3 — Check rápido</h3>
-<p class="step-instructions">Proyectar Diapositiva 7. Verifica comprensión con 2 preguntas breves sobre R.C.T.F.A.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Pregunta 1: ¿Por qué es importante definir la "Audiencia" en un prompt? Pregunta 2: Si la IA no entiende tu "Tarea", ¿qué componente de R.C.T.F.A. deberías revisar primero?</p>
-</div>
-</div>
-</article>
-</div>
-</section>
-<!-- 4) Brain Spark -->
-<section class="activity-card" id="activity-4">
-<h2 class="activity-title">Brain Spark</h2>
-<p class="activity-purpose">Producir el entregable tangible del Micro-Proyecto aplicando el marco del AI GYM.</p>
-<div class="steps">
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 1 — Producción del prompt R.C.T.F.A.</h3>
-<p class="step-instructions">Proyectar Diapositiva 8. Diseña un prompt completo y detallado usando R.C.T.F.A. para una tarea elegida (plan de entrenamiento, itinerario de viaje, receta adaptada a alergias, etc.). Luego, usa un LLM para generar el resultado. Tiempo de trabajo autónomo.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">N/A</p>
-</div>
-</div>
-</article>
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 2 — Iteración y mejora</h3>
-<p class="step-instructions">Proyectar Diapositiva 9. Refina tu prompt. Considera cómo podrías adaptarlo para una audiencia diferente o añadir restricciones específicas para mejorar el resultado. Tiempo de trabajo autónomo.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">N/A</p>
-</div>
-</div>
-</article>
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 3 — Evidencia de resultado</h3>
-<p class="step-instructions">Proyectar Diapositiva 10. Solicita el texto del prompt R.C.T.F.A. y el resultado generado por la IA (captura de pantalla o texto).</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Suban la evidencia de su trabajo: el prompt que diseñaron y el resultado que la IA generó. Nombren su archivo: M04_Prompt_[TuTarea]_[TuNombre]. Asegúrense de que ambos elementos sean claramente visibles.</p>
-</div>
-</div>
-</article>
-</div>
-</section>
-<!-- 5) GNIUS STORM -->
-<section class="activity-card" id="activity-5">
-<h2 class="activity-title">GNIUS STORM</h2>
-<p class="activity-purpose">Exhibición breve, síntesis y conexión profesional.</p>
-<div class="steps">
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 1 — Showcase relámpago</h3>
-<p class="step-instructions">2–3 equipos/personas muestran su prompt y el resultado generado (30–45 s c/u).</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Presenten su prompt y el resultado. Enfoquen su explicación en cómo la estructura R.C.T.F.A. les ayudó a obtener un resultado específico y útil. ¿Qué componente fue clave para su éxito?</p>
-</div>
-</div>
-</article>
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 2 — Cierre ejecutivo</h3>
-<p class="step-instructions">Proyectar Diapositiva 11. Redacta síntesis: (a) 1 aprendizaje clave, (b) 1 criterio de calidad que marcó la diferencia, (c) siguiente paso aplicable fuera del aula.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">En síntesis: la Ingeniería de Prompts es una forma de comunicación precisa con la IA. El aprendizaje clave es que la calidad del resultado de una IA depende directamente de la calidad de nuestra instrucción. La estructura R.C.T.F.A. fue el criterio que marcó la diferencia al obligarnos a ser explícitos. El siguiente paso es aplicar esta metodología a cualquier herramienta de IA que utilicen, ya sea para investigación, creación de contenido o análisis de datos. La precisión es poder.</p>
-</div>
-</div>
-</article>
-</div>
-</section>
-</main>
-</div>
-<script src="script.js"></script>
+    <header>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 4 - 1o de Preparatoria</strong></h1>
+        <div class="header-widgets">
+            <div class="timer-container">
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle-input">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+    <div class="main-container">
+        <aside class="activity-list">
+            <h2>Actividades</h2>
+            <ul>
+                <li><a href="#activity-0">📝</a></li>
+                <li><a href="#activity-1">1</a></li>
+                <li><a href="#activity-2">2</a></li>
+                <li><a href="#activity-3">3</a></li>
+                <li><a href="#activity-4">4</a></li>
+                <li><a href="#activity-5">5</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
+            <div class="activity-card" id="activity-0">
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> usar ChatGPT, Gemini y Claude para construir prompts con la estructura R.C.T.F.A. para mejorar la claridad y comprender la importancia de la comunicación intencional.</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">Explícame cómo funciona la estructura R.C.T.F.A. como “ADN” de una instrucción profesional. Analicemos cada componente y por qué Audiencia cambia el tono, la profundidad y la utilidad. Guíame a tomar una misma tarea y producir 3 prompts variando solo la Audiencia, y ayúdame a evaluar cuál versión comunica mejor la intención.</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>Comunicación Intencional: Es el arte de dar instrucciones tan claras y detalladas que la IA entienda exactamente qué necesitas, evitando resultados vagos.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Usar la estructura R.C.T.F.A. para diseñar instrucciones profesionales en plataformas de IA.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes audiencias y formatos de salida para entender cómo afectan la utilidad del resultado.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> Computadora o Tablet (1 por cada 2 estudiantes)</label>
+                        <label><input type="checkbox"> Acceso a ChatGPT (https://chatgpt.com/), Gemini (https://gemini.google.com/) o Claude (https://claude.ai/)</label>
+                        <label><input type="checkbox"> Guía digital de la estructura R.C.T.F.A.</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa interacción con Modelos de Lenguaje (LLMs)</label>
+                        <label><input type="checkbox"> 📋 Para usar la IA: Ingresa a la plataforma elegida, inicia sesión y abre un nuevo chat.</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> Mantener tu computadora limpia, cerrar pestañas innecesarias y cuidar tu postura frente a la pantalla.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre la estructura R.C.T.F.A. y la comunicación intencional (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
+                        <ul>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si la IA genera información falsa:</strong> Refina el Contexto y la Tarea en tu estructura R.C.T.F.A. Pide a la IA que cite fuentes.</li>
+                            <li><strong>Si el tono no es el adecuado:</strong> Revisa el componente de Audiencia en tu prompt. Sé más específico sobre quién recibirá la información.</li>
+                            <li><strong>Si hay errores en el prompt:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
+                            <li><strong>Si no puedes acceder a la IA:</strong> Verifica tu conexión a internet y asegúrate de haber iniciado sesión correctamente en la plataforma elegida.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
+            <div class="activity-card" id="activity-1">
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "¡Hoy aprenderán el lenguaje secreto para dominar cualquier Inteligencia Artificial!".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre la estructura R.C.T.F.A. para prompts profesionales.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A construir prompts con R.C.T.F.A. para que la IA entregue resultados perfectos.</p>
+                        <p><strong>Aplicación real:</strong> Los ingenieros de prompts en empresas tecnológicas usan esta estructura para automatizar tareas complejas y generar contenido de alta calidad.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 2: A.I. GYM -->
+            <div class="activity-card" id="activity-2">
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica cómo cada parte de R.C.T.F.A. (Rol, Contexto, Tarea, Formato, Audiencia) mejora una instrucción.</li>
+                            <li>Introduce el concepto de comunicación intencional y control de resultados.</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a usar R.C.T.F.A. para diseñar prompts profesionales.</li>
+                            <li>Aprender sobre la importancia de definir la audiencia en una instrucción.</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
+                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a usar R.C.T.F.A. para mejorar la claridad y utilidad de tus instrucciones.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">Ahora vamos a aprender a hablar con la IA como profesionales. Abran el chat con XOLO y salúdenlo. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy. No necesitan escribir un prompt especial, solo empiecen a platicar con él. Vamos a descubrir la estructura R.C.T.F.A., que es como el ADN de una buena instrucción. Pregúntenle cómo cada parte cambia el resultado y asegúrense de entender por qué la audiencia es tan importante. ¡XOLO es su experto personal, así que no duden en preguntarle todo!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
+            <div class="activity-card" id="activity-3">
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los plataformas de IA conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a desarrollar una idea y un VIBE que aplique la estructura R.C.T.F.A. de forma efectiva.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO una idea y un VIBE para usar R.C.T.F.A. en una tarea útil.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Probar su prompt en ChatGPT, Gemini o Claude y evaluar los resultados.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Ayúdame a crear un prompt completo con R.C.T.F.A. para una tarea útil para mí (estudio/vida/proyecto). Guíame a decidir el formato ideal de salida y a ajustar el contexto para que la IA no invente. Ejecuta: entrega mi prompt final R.C.T.F.A. y genera el resultado; después escribe una mini-revisión de 3 mejoras que apliqué y por qué."</pre>
+                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿El resultado de la IA fue exactamente lo que esperabas al usar R.C.T.F.A.?</li>
+                            <li>¿Qué pasa si eliminas el componente de 'Audiencia' en tu prompt?</li>
+                            <li>¿Funciona igual el prompt en ChatGPT que en Gemini o Claude?</li>
+                            <li>¿Cómo ayuda la estructura R.C.T.F.A. a tener una comunicación más intencional con la tecnología?</li>
+                            <li>¿Por qué es importante tener pensamiento crítico al evaluar si la respuesta de la IA es útil o veraz?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es hora de crear! Vamos a usar lo que aprendimos para diseñar una herramienta real. Pidan a XOLO que los ayude a idear un proyecto donde apliquen R.C.T.F.A. para algo que les sirva en su estudio o vida diaria. El flujo es: idear con XOLO, definir el VIBE, obtener su GCS (instrucción final), probarla en su plataforma de IA favorita y experimentar. Por ejemplo, podrían crear un tutor personalizado para matemáticas o un organizador de proyectos. Si tienen errores o dudas, pregúntenle a XOLO, él los ayudará a depurar su prompt. ¡Recuerden probar los límites de su instrucción y responder las preguntas de experimentación!</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya probé con un prompt básico de R.C.T.F.A. ¿Puedes enseñarme cómo hacer que mi prompt incluya variables dinámicas o ejemplos de 'few-shot prompting' para ser aún más preciso?"</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
+            <div class="activity-card" id="activity-4">
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué componentes de su prompt R.C.T.F.A. funcionaron mejor.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué componentes de R.C.T.F.A. mejoraron más tu resultado? ¿Qué te sorprendió de la respuesta de la IA?</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi prompt usó R.C.T.F.A. para generar un resultado de alta calidad. Me sorprendió que al cambiar la audiencia, el tono cambió completamente."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
+            <div class="activity-card" id="activity-5">
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
+                        <ol>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                        </ol>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
 </body>
-</html>
+</html></html>
